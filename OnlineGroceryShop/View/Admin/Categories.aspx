@@ -14,22 +14,25 @@
                 
                     <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Category Name</label>
-    <input type="text" class="form-control" id="CatNameTb">
+    <input type="text" class="form-control" id="CatNameTb" runat="server">
   </div>
                     <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Category Remarks</label>
-    <input type="text" class="form-control" id="CatRemarkTb">
+    <input type="text" class="form-control" id="CatRemarkTb" runat="server">
   </div>
                     
                 <br />
                 <br />
                 <br />
-                <asp:Button text="   Edit   " class="btn btn-danger" runat="server" />
-                <asp:Button text="  Save  " class="btn btn-danger" runat="server" />
-                <asp:Button text="Delete" class="btn btn-danger" runat="server" />
+                <label id="ErrMsg" runat="server" class="text-danger"></label><br />
+                <asp:Button text="   Edit   " class="btn btn-danger" runat="server" ID="EditBtn" OnClick="EditBtn_Click" />
+                <asp:Button text="  Save  " class="btn btn-danger" runat="server" ID="SaveBtn" OnClick="SaveBtn_Click" />
+                <asp:Button text="Delete" class="btn btn-danger" runat="server" ID="DeleteBtn" OnClick="DeleteBtn_Click"/>
             </div>
             <div class="col-md-8">
-                <!-- Table Here -->
+                <asp:GridView runat="server" class="table table-hover" ID="CategoryGV" AutoGenerateSelectButton="True" OnSelectedIndexChanged="CategoryGV_SelectedIndexChanged">
+
+                </asp:GridView>
             </div>
         </div>
     </div>
