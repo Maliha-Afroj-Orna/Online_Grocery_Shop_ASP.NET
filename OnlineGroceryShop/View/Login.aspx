@@ -9,12 +9,7 @@
     <link rel="stylesheet" href="../Asset/Lib/Bootstrap/css/bootstrap.min.css"/>
 </head>
 <body>
-    <!-- 
-        <form id="form1" runat="server">
-        <div>
-        </div>
-    </form>
-    -->
+    
 
     <div class="container-fluid">
         <div class="row" style="height:90px;"></div>
@@ -39,7 +34,7 @@
 
   <div class="mb-3 form-group">
     <input type="radio" class="form-check-input" id="SellerRadio" name="Role" runat="server" />
-    <label class="form-check-label" for="exampleCheck1">Seller</label>
+    <label class="form-check-label" for="SellerRadio">Seller</label>
       <input type="radio" class="form-check-input" id="AdminRadio" checked="True" name="Role" runat="server" />
     <label class="form-check-label" for="AdminRadio">Admin</label>
   </div>
@@ -47,13 +42,14 @@
         <label id="InfoMsg" runat="server" class="text-danger"></label>
         <asp:Button text="Login" class="btn btn-danger btn-block" runat="server" ID="LoginBtn" OnClick="LoginBtn_Click" />
 
-        <!-- <button type="submit" class="btn btn-danger btn-block">Login</button> -->
+       
   </div>
   
             
             </div>
         </div>
-    </div>
+        </div>
+  
 
 </body>
 </html>

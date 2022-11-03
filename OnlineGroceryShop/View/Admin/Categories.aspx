@@ -29,7 +29,7 @@
                 <asp:Button text="  Save  " class="btn btn-danger" runat="server" ID="SaveBtn" OnClick="SaveBtn_Click" />
                 <asp:Button text="Delete" class="btn btn-danger" runat="server" ID="DeleteBtn" OnClick="DeleteBtn_Click"/>
             </div>
-            <div class="col-md-8">
+            <div style="margin-bottom:2%;margin-top:3%;" class="col-md-8">
                 <asp:GridView runat="server" class="table table-hover" ID="CategoryGV" AutoGenerateSelectButton="True" OnSelectedIndexChanged="CategoryGV_SelectedIndexChanged">
 
                 </asp:GridView>

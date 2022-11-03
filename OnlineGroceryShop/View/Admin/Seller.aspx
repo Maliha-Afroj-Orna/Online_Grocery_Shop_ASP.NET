@@ -9,7 +9,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4">
+            <div style="margin-bottom:2%;" class="col-md-4">
                 <h2 class="text-danger">Sellers Details</h2>
                 
                     <div class="mb-3">
@@ -37,7 +37,7 @@
                 <asp:Button text="  Save  " class="btn btn-danger" runat="server" ID="SaveBtn" OnClick="SaveBtn_Click" />
                 <asp:Button text="Delete" class="btn btn-danger" runat="server" ID="DeleteBtn" OnClick="DeleteBtn_Click" />
             </div>
-            <div class="col-md-8">
+            <div style="margin-bottom:2%;margin-top:3%;" class="col-md-8">
                  <asp:GridView runat="server" class="table table-hover" ID="SellerGV" AutoGenerateSelectButton="True" OnSelectedIndexChanged="SellerGV_SelectedIndexChanged">
 
                 </asp:GridView>
