@@ -49,7 +49,7 @@ namespace OnlineGroceryShop.View
                 {
                     SName = EmailId.Value;
                     SKey = Convert.ToInt32(dt.Rows[0][0].ToString());
-                    Response.Redirect("Admin/Dashboard.aspx");
+                    Response.Redirect("Seller/Billing.aspx");
                 }
             }
         }
