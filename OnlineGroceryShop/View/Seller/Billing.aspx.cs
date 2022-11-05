@@ -12,6 +12,7 @@ namespace OnlineGroceryShop.View.Seller
     {
         Models.Functions Con;
         DataTable dt = new DataTable();
+        int Seller = Login.SKey;
         protected void Page_Load(object sender, EventArgs e)
         {
             Con = new Models.Functions();
@@ -32,11 +33,28 @@ namespace OnlineGroceryShop.View.Seller
             }
         }
 
+        private void InsertBill()
+        {
+            try
+            {
+                    string Query = "insert into BillTbl values('{0}','{1}',{2})";
+                    Query = string.Format(Query, System.DateTime.Today, Seller, Amount);
+                    Con.SetData(Query);
+                    ErrMsg.InnerText = "Bill Inserted!!!";
+               
+            }
+            catch (Exception Ex)
+            {
+                ErrMsg.InnerText = Ex.Message;
+            }
+        }
+        int GrdTotal;
         protected void BindGrid()
         {
             BillGV.DataSource = (DataTable)ViewState["Bill"];
             BillGV.DataBind();
         }
+        public static int Amount;
 
         //Add this Method
         public override void VerifyRenderingInServerForm(Control control)
@@ -81,7 +99,7 @@ namespace OnlineGroceryShop.View.Seller
             ShowProducts();
             ErrMsg.InnerText = "Quantity Updated!!!";
         }
-        int GrdTotal = 0;
+       
         protected void AddToBillBtn_Click(object sender, EventArgs e)
         {
             int total = Convert.ToInt32(PrQtyTb.Value) * Convert.ToInt32(PrPriceTb.Value);
@@ -96,11 +114,22 @@ namespace OnlineGroceryShop.View.Seller
             ViewState["Bill"] = dt;
             this.BindGrid();
             UpdateStock();
-            GrdTotal = GrdTotal + (Convert.ToInt32(PrQtyTb.Value) * Convert.ToInt32(PrPriceTb.Value));
-            GrdTotTb.InnerText = "Rs " + GrdTotal;
+
+            GrdTotal = 0;
+            for(int i=0; i<=BillGV.Rows.Count-1;i++)
+            {
+                GrdTotal = GrdTotal + Int32.Parse(BillGV.Rows[i].Cells[4].Text.ToString());
+            }
+            Amount = GrdTotal;
+            GrdTotTb.InnerHtml = "Rs " + GrdTotal;
             PNameTb.Value = string.Empty;
             PrPriceTb.Value = string.Empty;
             PrQtyTb.Value = string.Empty;
+        }
+
+        protected void PrintBtn_Click(object sender, EventArgs e)
+        {
+            InsertBill();
         }
     }
 }

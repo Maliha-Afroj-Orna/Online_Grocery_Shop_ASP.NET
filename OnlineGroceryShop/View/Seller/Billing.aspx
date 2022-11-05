@@ -9,7 +9,6 @@
             Pwin.document.close();
             Pwin.focus();
             Pwin.print();
-            Pwin.close();
         }
     </script>
 </asp:Content>
@@ -90,10 +89,10 @@
                     <div class="col">
                         <h3 id="GrdTotTb" class="text-danger" runat="server"></h3>
                     </div>
-                    <div class="col d-grid"> <asp:Button text="Print Bill" class="btn btn-warning btn-block text-white" ID="PrintBtn" OnClientClick="PrintPanel()" runat="server" /></div>
+                    <div class="col d-grid"> <asp:Button text="Print Bill" class="btn btn-warning btn-block text-white" ID="PrintBtn" OnClientClick="PrintPanel()" runat="server" OnClick="PrintBtn_Click" /></div>
                 </div>
             </div>
-
+             
 
         </div>
     </div>

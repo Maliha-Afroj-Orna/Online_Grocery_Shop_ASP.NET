@@ -67,11 +67,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Asset\Images\budget.png" />
+    <Content Include="Asset\Images\category.png" />
     <Content Include="Asset\Images\dashboardlayout.png" />
     <Content Include="Asset\Images\dollar.png" />
+    <Content Include="Asset\Images\grocery.png" />
     <Content Include="Asset\Images\grocery1.png" />
     <Content Include="Asset\Images\grocery2.png" />
     <Content Include="Asset\Images\harvest.png" />
+    <Content Include="Asset\Images\money.png" />
     <Content Include="Asset\Images\vegetarianFood.png" />
     <Content Include="Asset\Images\webanalytics.png" />
     <Content Include="Asset\Lib\Bootstrap\css\bootstrap-grid.css" />

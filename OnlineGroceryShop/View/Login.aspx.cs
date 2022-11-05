@@ -14,15 +14,15 @@ namespace OnlineGroceryShop.View
         {
             Con = new Models.Functions();
         }
-        public static string SName;
-        int SKey;
+        public static string SName="";
+        public static int SKey;
          //Add this Method
         public override void VerifyRenderingInServerForm(Control control)
         {
 
         }
         Models.Functions Con;
-        protected void LoginBtn_Click(object sender, EventArgs e)
+        protected void SaveBtn_Click(object sender, EventArgs e)
         {
             if(AdminRadio.Checked)
             {
