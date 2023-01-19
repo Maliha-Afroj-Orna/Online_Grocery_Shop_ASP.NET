@@ -29,11 +29,12 @@
           <a class="nav-link" href="Seller.aspx">Sellers</a>
         </li>
           <li class="nav-item">
-          <a class="nav-link" href="Dashboard.aspx">Dashboard</a>
+          <a class="nav-link" href="../Seller/Billing.aspx">Billing</a>
         </li>
           <li class="nav-item">
-          <a class="nav-link" href="../Login.aspx">Logout</a>
+          <a class="nav-link" href="Dashboard.aspx">Dashboard</a>
         </li>
+         
       </ul>
     </div>
   </div>
